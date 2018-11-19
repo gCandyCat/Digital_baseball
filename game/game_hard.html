@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>数字棒球</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../assets/css/style_gyx.css"/>
+<script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="../assets/js/g_style.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+</head>
+
+<body>
+    <header class="game_header clearfix">
+        <i class="header_tips" onclick="doPause()" id="tid">
+            <img class="baseball_small" src="../assets/images/game_tipsl.png" alt="logo">
+        </i>
+        <img class="baseball_small" src="../assets/images/bg_small.png" alt="logo">
+        <i class="header_menu" onclick="doPause()" id="tid">
+            <img class="baseball_small" src="../assets/images/game_tipsr.png" alt="logo">
+        </i>
+    </header>
+    <section class="main clearfix">
+        <div class="guess_list">
+             <ul>
+                <li class="guess hard_list"></li>
+                <li class="guess hard_list"></li>
+                <li class="guess hard_list"></li>
+                <li class="guess hard_list"></li>
+                <li class="guess hard_list"></li>
+            </ul>
+        </div>
+    </section>
+    <section class="main clearfix">
+        <div class="result_out">
+        <div class="game_result">
+            <ul>
+            </ul>
+        </div>
+        </div>
+    </section>
+    <section class="main game_bottom clearfix">
+        <div class="game_keyboard">
+            <ul class="keyBoardup">
+            </ul>
+            <ul class="keyBoarddown"> 
+            </ul>
+        </div>
+        <p class="game_restart">本次剩余时间：<i class="countDown">30</i>s</p>
+        <a href="javascript:void(0)" class="testbtn">提交&#40<i class="times">0</i>/10&#41</a>
+        <!-- <div onclick="doPause()" id="tid" class="pause">暂停</div>
+        <div onclick="doGo()" id="gid" class="continue">继续</div> -->
+    </section>
+    <section class="main clearfix">
+        <div class="left_popup">
+            <div class="game_bg"></div>
+            <div class="popup_intro">
+                <h5>当前模式：<span>困难模式</span></h5>
+                <p>猜五个数字，十次机会，每次30秒思考时间<br />每超过一次30秒限定时间，减去一次机会</p>
+                <span>提示规则</span>
+                <p>             
+                    数字对,位置不对: ball(b)<br>
+                    数字对,且位置对: strike(s) <br>            
+                    数字、位置均不对: all out
+                </p>
+                <i class="iclose" onclick="doGo()" id="gid">X</i>
+            </div>
+        </div>
+        <div class="right_popup">
+            <div class="game_bg"></div>
+            <div class="popup_img">
+                <!-- <div> -->
+                    <p class="game_on" onclick="doGo()" id="gid">
+                        <img src="../assets/images/popup_img1.png" alt=""><br>
+                        继续
+                    </p>
+                    <p class="game_restart">
+                        <img src="../assets/images/popup_img2.png" alt=""><br>
+                        重新开始
+                    </p>
+                <!-- </div>
+                <div> -->
+                    <a href="../choose.html" class="choose_game">
+                        <img src="../assets/images/popup_img3.png" alt=""><br>
+                        选择难度
+                    </a>
+                    <a href="../index.html" class="back_index">
+                        <img src="../assets/images/popup_img4.png" alt=""><br>
+                        首页
+                    </a>
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
